@@ -1,11 +1,12 @@
-package com.example.productinformation.data.service;
+package com.example.productinformation.service;
 
 import com.example.productinformation.Repository.ProductInformationRepository;
 import com.example.productinformation.data.dto.ProductInformationDto;
-import com.example.productinformation.data.entity.ProductInformationEntity;
-import com.example.productinformation.data.mapper.ProductInformationMapper;
+import com.example.productinformation.entity.ProductInformationEntity;
+import com.example.productinformation.mapper.ProductInformationMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -54,23 +55,23 @@ public class ProductInformationServiceImpl implements ProductInformationService{
     }
 
     @Override
-    public List<ProductInformationEntity> findByNameContaining(String keyword) {
+    public List<ProductInformationEntity> findByProductNameContaining(String keyword) {
         return productInformationRepository.findByProductNameContaining(keyword);
     }
 
     @Override
-    public List<ProductInformationEntity> findByPriceLessThan(int value) {
-        return productInformationRepository.findByPriceLessThan(value);
+    public List<ProductInformationEntity> findByProductPriceLessThan(int value) {
+        return productInformationRepository.findByProductPriceLessThan(value);
     }
 
     @Override
-    public List<ProductInformationEntity> findByPriceGreaterThan(int value) {
-        return productInformationRepository.findByPriceGreaterThan(value);
+    public List<ProductInformationEntity> findByProductPriceGreaterThan(int value) {
+        return productInformationRepository.findByProductPriceGreaterThan(value);
     }
 
     @Override
-    public List<ProductInformationEntity> findByPriceBetween(int value1, int value2) {
-        return productInformationRepository.findByPriceBetween(value1, value2);
+    public List<ProductInformationEntity> findByProductPriceBetween(int value1, int value2) {
+        return productInformationRepository.findByProductPriceBetween(value1, value2);
     }
 
 }

@@ -1,4 +1,4 @@
-package com.example.productinformation.data.entity;
+package com.example.productinformation.entity;
 
 import com.example.productinformation.data.category.Category;
 import com.example.productinformation.data.dto.ProductInformationDto;

@@ -1,13 +1,12 @@
 package com.example.productinformation.data.dto;
 
 import com.example.productinformation.data.category.Category;
-import com.example.productinformation.data.entity.ProductInformationEntity;
+import com.example.productinformation.entity.ProductInformationEntity;
 import lombok.*;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 @Data
 @NoArgsConstructor
