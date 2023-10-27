@@ -1,5 +1,6 @@
 package com.example.productinformation.service;
 
+import com.example.productinformation.data.category.Category;
 import com.example.productinformation.data.dto.ProductInformationDto;
 import com.example.productinformation.entity.ProductInformationEntity;
 
@@ -15,4 +16,5 @@ public interface ProductInformationService {
     List<ProductInformationEntity> findByProductPriceLessThan(int value);
     List<ProductInformationEntity> findByProductPriceGreaterThan(int value);
     List<ProductInformationEntity> findByProductPriceBetween(int value, int value2);
+    List<ProductInformationEntity> getProductByCategory(String category);
 }

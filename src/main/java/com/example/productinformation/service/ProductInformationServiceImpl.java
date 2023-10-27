@@ -1,12 +1,12 @@
 package com.example.productinformation.service;
 
-import com.example.productinformation.Repository.ProductInformationRepository;
+import com.example.productinformation.data.category.Category;
+import com.example.productinformation.repository.ProductInformationRepository;
 import com.example.productinformation.data.dto.ProductInformationDto;
 import com.example.productinformation.entity.ProductInformationEntity;
 import com.example.productinformation.mapper.ProductInformationMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -72,6 +72,10 @@ public class ProductInformationServiceImpl implements ProductInformationService{
     @Override
     public List<ProductInformationEntity> findByProductPriceBetween(int value1, int value2) {
         return productInformationRepository.findByProductPriceBetween(value1, value2);
+    }
+
+    public List<ProductInformationEntity> getProductByCategory(String category){
+        return null;
     }
 
 }
